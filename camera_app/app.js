@@ -27,22 +27,28 @@ cameraTrigger.onclick = function() {
     cameraSensor.height = cameraView.videoHeight;
     // Create image
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
-    // direct to tkaen image to image/webp uri
-    cameraOutput.src = cameraSensor.toDataURL("image/webp");
+    // direct to taken image to image/webp uri
+    cameraOutput.src = cameraSensor.toDataURL("image/jpeg");
+
     // Add to "taken" class, see css for "taken" class to adjust picture dimensions
     cameraOutput.classList.add("taken");
+
+
+
+    //** Testing code...
+
+
+    var image = cameraOutput.src;
+
+    var link = document.getElementById('link');
+    link.setAttribute('download', 'TestPic.jpeg');
+    link.setAttribute('href', image);
+    link.click();
+
+    //** TEST
+
     
-    
-    //Testing code after...
 
-
-    var image = cameraSensor.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
-
-    // check type. Make sure not compressed transition image
-    console.log(type(image));
-
-    // saving image for testing output
-    window.location.href=image;
 };
 
 // Start the video stream when the window loads
