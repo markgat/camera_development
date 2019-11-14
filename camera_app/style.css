@@ -32,6 +32,7 @@ html, body{
     left: calc(50% - 100px);
 }
 
+/* alterations to picture for photo preview */
 .taken{
     height: 100px!important;
     width: 100px!important;

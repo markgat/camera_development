@@ -31,10 +31,18 @@ cameraTrigger.onclick = function() {
     cameraOutput.src = cameraSensor.toDataURL("image/webp");
     // Add to "taken" class, see css for "taken" class to adjust picture dimensions
     cameraOutput.classList.add("taken");
+    
+    
+    //Testing code after...
+
 
     var image = cameraSensor.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
 
-    console.log(image);
+    // check type. Make sure not compressed transition image
+    console.log(type(image));
+
+    // saving image for testing output
+    window.location.href=image;
 };
 
 // Start the video stream when the window loads
