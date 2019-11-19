@@ -7,7 +7,7 @@
 <!-- Name of your awesome camera app -->
 <title>Camera App</title> 
 <!-- Link to your main style sheet-->
-<link rel="stylesheet" href="style.css"> 
+<link rel="stylesheet" href="static/style.css"> 
 </head>
 <body>
     <!-- Camera -->
@@ -25,9 +25,13 @@
         <button id="camera--trigger">Take a picture</button>
 
         <!--Anchor added for download rename-->
-        <a id="link"></a>
+        <!-- <a id="link"></a> -->
+
+        <form action="{{ url_for('handle_data') }}" method="post" name="datauri" style="display: none;">
+            <input type="text" name="datauri" id="picpost">
+        </form>
     </main>
 <!-- Reference to your JavaScript file -->
-<script src="app.js"></script> 
+<script src="static/app.js"></script> 
 </body>
 </html>

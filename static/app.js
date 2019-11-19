@@ -1,5 +1,5 @@
 // Set constraints for the video stream such as front view camera and no audio recording
-var constraints = { video: { facingMode: "user" }, audio: false };
+var constraints = {video: { facingMode: "user" }, audio: false };
 
 // Define constants for camera elements
 const cameraView = document.querySelector("#camera--view"),
@@ -30,8 +30,8 @@ cameraTrigger.onclick = function() {
     // direct to taken image to image/webp uri
     cameraOutput.src = cameraSensor.toDataURL("image/jpeg");
 
-    // Add to "taken" class, see css for "taken" class to adjust picture dimensions
-    cameraOutput.classList.add("taken");
+    // Add to "taken" class for zoomout snapshot effect .See css for "taken" class to adjust picture dimensions
+    // cameraOutput.classList.add("taken");
 
 
 
@@ -39,15 +39,17 @@ cameraTrigger.onclick = function() {
 
 
     var image = cameraOutput.src;
-
-    var link = document.getElementById('link');
-    link.setAttribute('download', 'TestPic.jpeg');
-    link.setAttribute('href', image);
-    link.click();
-
-    //** TEST
-
+    // SET FORM VALUE TO BASE 64 URI THEN POST TO FLASK ENDPOINT
+    var posted = document.getElementById('picpost');
+    posted.setAttribute('value', image);
+    document.datauri.submit();
     
+    // Uncomment to download pic locally
+    // var link = document.getElementById('link');
+    // link.setAttribute('download', 'TestPic.jpeg');
+    // link.setAttribute('href', image);
+    // link.click();
+
 
 };
 
