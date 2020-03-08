@@ -1,6 +1,6 @@
 # camera_development
 Repo for testing and developing camera functionality for websites and apps. Mini project in order to operate webcam for
-
+![Camera_Logo](/camera-logo.jpg)
 
 ## Getting Started
 
