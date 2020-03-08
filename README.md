@@ -13,9 +13,9 @@ $ git clone https://github.com/markgat/camera_development.git
 ## Running
 1) Open the folder to the local repository and run the program "web.py"
 2) On the terminal, there will be a URL,
-````
-Running on http://127.0.0.1:5000/
-````
+    ````
+    Running on http://127.0.0.1:5000/
+    ````
 Open the URL to start up the web application on your local browser.  
 3) Allow access to use your camera if prompted, when the webpage launches.  
 4) Line-up for the photo, smile, and press the button labeled "Take a picture".  
