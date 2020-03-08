@@ -12,7 +12,6 @@ $ git clone https://github.com/markgat/camera_development.git
 ````
 ## Running
 1) Open the folder to the local repository and run the program "web.py"
-
 2) On the terminal, there will be a URL,
 ````
 Running on http://127.0.0.1:5000/
